@@ -1,13 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
+import Section from "../components/Section"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h4>Posts</h4>
+    <Section bgimage="home-gradient" />
     {data.allWordpressPost.edges.map(({ node }) => (
       <div>
         <Link to={node.slug}>
@@ -25,8 +26,7 @@ const IndexPage = ({ data }) => (
         <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>
     ))}
-    <Link to="/blog/">blog</Link>
-  </Layout>
+  </>
 )
 
 export default IndexPage

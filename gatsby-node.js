@@ -16,9 +16,6 @@ exports.createPages = ({ graphql, actions }) => {
               source_url
               title
             }
-            author {
-              name
-            }
           }
         }
       }
