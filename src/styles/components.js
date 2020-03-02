@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const colors = {
   ligthBlue: "#21d4fd",
@@ -7,8 +7,8 @@ export const colors = {
   textGray: "#888888",
   red: "#e60023",
   ligthGray: "#f5f5f5",
-  black: "#060606",
-}
+  black: "#060606"
+};
 
 export const StyledHeader = styled.header`
   background: transparent;
@@ -28,7 +28,7 @@ export const StyledHeader = styled.header`
   a {
     color: ${colors.ligthBlue};
   }
-`
+`;
 
 export const StyledCard = styled.div`
   border-radius: 1rem;
@@ -45,10 +45,34 @@ export const StyledCard = styled.div`
     justify-content: flex-start;
     border-bottom: 1px solid #ddd;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 0.938rem;
+    padding: 0.938rem;
+    img {
+      border-radius: 50% !important;
+      border: solid 1px #e9ebee;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px 0 0;
+    }
   }
-
-`
+  .title {
+    line-height: 1.375rem;
+    font-size: 1.125rem;
+    h2 {
+      color: ${colors.ligthBlue};
+      font-weight: 300;
+      margin: 0 auto;
+      padding: 0.938rem;
+    }
+  }
+  .body {
+    margin: 0 auto;
+    padding: 0.938rem;
+    color: #999999;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+`;
 export const Button = styled.button`
   cursor: pointer;
   background-color: ${({ type }) =>
@@ -92,14 +116,14 @@ export const Button = styled.button`
   + button {
     margin: 0 0 0 1rem;
   }
-`
+`;
 export const StyledSection = styled.div`
   // background: ${colors.darkPurple};
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  .custom-labs-case-studies {
+  .custom-section {
     height: 100%;
     padding: 4.375rem 0;
     .container {
@@ -127,6 +151,7 @@ export const StyledSection = styled.div`
         strong {
           display: block;
           font-weight: 400;
+          color: white;
         }
       }
       .dp-flex {
@@ -138,7 +163,7 @@ export const StyledSection = styled.div`
       }
     }
   }
-`
+`;
 export const StyledFooter = styled.div`
   background: ${colors.darkPurple};
   color: white;
@@ -217,4 +242,4 @@ export const StyledFooter = styled.div`
       }
     }
   }
-`
+`;

@@ -1,7 +1,11 @@
-import React from "react"
+import React from "react";
 
-import { StyledFooter, Button } from "../styles/components"
-import Image from "./image"
+import { StyledFooter, Button } from "../styles/components";
+import Image from "./image";
+import facebook from "../images/social/facebook.svg";
+import instagram from "../images/social/instagram.svg";
+import twitter from "../images/social/twitter.svg";
+import vimeo from "../images/social/vimeo.svg";
 
 export default function Footer() {
   return (
@@ -35,11 +39,33 @@ export default function Footer() {
               world-class quality software using agile processes and real-time
               interaction with our clients. <a href="/about">Read more</a>
             </p>
-            {/* <a href="https://facebook.com/pslcorp" target="_blank"><img src="/images/icon-facebook.svg" alt="Facebook logo" title="Facebook"></a>
-          <a href="https://twitter.com/pslcorp" target="_blank"><img src="/images/icon-twitter.svg" alt="Twitter logo" title="Twitter"></a>
-          <a href="https://instagram.com/pslcorp" target="_blank"><img src="/images/icon-instagram.svg" alt="Instagram logo" title="Instagram"></a>
-          <a href="https://linkedin.com/company/pslcorp" target="_blank"><img src="/images/icon-linkedin.svg" alt="Linkedin" title="Linkedin"></a>
-          <a href="https://www.youtube.com/PSLCorp" target="_blank"><img src="/images/icon-youtube.svg" alt="Youtube" title="Youtube"></a> */}
+            <div className="social">
+              <a title="facebook" href="https://facebook.com/pslcorp">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                />
+              </a>
+              <a title="twitter" href="https://twitter.com/pslcorp">
+                <img
+                  className="fas fa-lg"
+                  src={twitter}
+                  alt="Twitter"
+                />
+              </a>
+              <a title="instagram" href="https://instagram.com/pslcorp">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                />
+              </a>
+              <a title="vimeo" href="https://www.youtube.com/PSLCorp">
+                <img
+                  src={vimeo}
+                  alt="Vimeo"
+                />
+              </a>
+            </div>
           </div>
           <div className="column-3">
             <h3>Useful articles</h3>
@@ -63,7 +89,6 @@ export default function Footer() {
                 <a href="https://www.pslcorp.com/">Nearshore Outsourcing</a>
               </li>
               <li>
-                {" "}
                 <a href="/nearshoring-outsourcing/the-practical-advantage-of-nearshore-outsourcing">
                   Advantage Of Offshore Outsourcing
                 </a>
@@ -110,5 +135,5 @@ export default function Footer() {
         </div>
       </div>
     </StyledFooter>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { StyledSection, Button } from "../styles/components"
 export default function Section(props) {
   return (
     <StyledSection className={props.bgimage}>
-      <div className="custom-labs-case-studies">
+      <div className="custom-section">
         <div className="container">
           <div className="column-3">
             <span>Our passion is coding the future</span>

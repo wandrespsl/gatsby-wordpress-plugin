@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Section from "../components/Section"
 import SEO from "../components/seo"
-import { StyledCard } from "../styles/components"
+import { StyledCard, Button } from "../styles/components"
+import avatar from "../images/blog-radius.png"
 
 const IndexPage = ({ data }) => (
   <>
@@ -14,7 +15,7 @@ const IndexPage = ({ data }) => (
         <StyledCard key={node.id}>
           <div className="header-post">
             <div className="avatar">
-              <img src="../images/blog-radius.png" alt="PSL" />
+              <img src={avatar} alt="PSL" />
             </div>
             <div className="col-cell">
               <div className="eb-post-author">
@@ -34,16 +35,23 @@ const IndexPage = ({ data }) => (
 
             {undefined !== node.featured_media &&
             null !== node.featured_media ? (
-              <di className="featured-thumbnail">
+              <div className="featured-thumbnail">
                 <img
                   src={node.featured_media.source_url}
                   alt={node.featured_media.title}
                 />
-              </di>
+              </div>
             ) : (
               ""
             )}
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <div className="body">
+              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <Link to={node.slug}>
+                <Button type="outline" className="btn btn-primary">
+                  Keep Reading →
+                </Button>
+              </Link>
+            </div>
           </div>
         </StyledCard>
       ))}
