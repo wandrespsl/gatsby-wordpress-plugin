@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby with wordpress`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@wandres`,
+    description: `Test gatsby with wordpress cms`,
+    author: `@weyandres`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,6 +15,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
+      options: {
+        develop: true, // Activates purging in npm run develop
+        purgeOnly: ["/all.scss"] // applies purging only on the bulma css file
+      }
+    }, // must be after other CSS plugins
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
@@ -21,6 +29,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,20 +46,20 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `demo.wp-api.org`,
-        protocol: `https`,
+        baseUrl: `pslpruebas.com/elementor`,
+        protocol: `http`,
         // is it hosted on wordpress.com, or self-hosted?
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: true,
+        useACF: false,
         plugins: [
           {
             resolve: `gatsby-wordpress-inline-images`,
             options:
             {
-              baseUrl: `demo.wp-api.org`,
-              protocol: `https`
+              baseUrl: `pslpruebas.com/elementor`,
+              protocol: `http`
             }
           }
         ],

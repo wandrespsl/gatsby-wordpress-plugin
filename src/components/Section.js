@@ -4,14 +4,14 @@ import { StyledSection, Button } from "../styles/components"
 
 export default function Section(props) {
   return (
-    <StyledSection id={props.bgimage}>
+    <StyledSection className={props.bgimage}>
       <div className="custom-labs-case-studies">
         <div className="container">
           <div className="column-3">
             <span>Our passion is coding the future</span>
             <h1>
               Nearshore Software Development
-              <strong>Offshore Outsourcing Center</strong>
+              Offshore Outsourcing Center
             </h1>
             <div className="dp-flex">
               <Button type="outline">
