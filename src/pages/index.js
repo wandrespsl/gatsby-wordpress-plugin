@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// import Layout from "../components/layout"
 import Section from "../components/Section"
 import SEO from "../components/seo"
 
@@ -10,7 +9,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <Section bgimage="home-gradient" />
     {data.allWordpressPost.edges.map(({ node }) => (
-      <div>
+      <div key={node.id}>
         <Link to={node.slug}>
           <h1>{node.title}</h1>
         </Link>
@@ -36,6 +35,7 @@ export const pageQuery = graphql`
     allWordpressPost(sort: { fields: [date] }) {
       edges {
         node {
+          id
           title
           excerpt
           slug

@@ -37,13 +37,23 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `pslpruebas.com/elementor`,
-        protocol: `http`,
+        baseUrl: `demo.wp-api.org`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
         useACF: false,
+        // plugins: [
+        //   {
+        //     resolve: `gatsby-wordpress-inline-images`,
+        //     options:
+        //     {
+        //       baseUrl: `demo.wp-api.org`,
+        //       protocol: `https`
+        //     }
+        //   }
+        // ],
         includedRoutes: [
           "**/categories",
           "**/posts",
