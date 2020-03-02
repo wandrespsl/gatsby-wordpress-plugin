@@ -43,17 +43,17 @@ module.exports = {
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
-        // plugins: [
-        //   {
-        //     resolve: `gatsby-wordpress-inline-images`,
-        //     options:
-        //     {
-        //       baseUrl: `demo.wp-api.org`,
-        //       protocol: `https`
-        //     }
-        //   }
-        // ],
+        useACF: true,
+        plugins: [
+          {
+            resolve: `gatsby-wordpress-inline-images`,
+            options:
+            {
+              baseUrl: `demo.wp-api.org`,
+              protocol: `https`
+            }
+          }
+        ],
         includedRoutes: [
           "**/categories",
           "**/posts",
