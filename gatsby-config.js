@@ -46,8 +46,8 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `pslpruebas.com/elementor`,
-        protocol: `http`,
+        baseUrl: `demo.wp-api.org`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
@@ -58,8 +58,8 @@ module.exports = {
             resolve: `gatsby-wordpress-inline-images`,
             options:
             {
-              baseUrl: `pslpruebas.com/elementor`,
-              protocol: `http`
+              baseUrl: `demo.wp-api.org`,
+              protocol: `https`
             }
           }
         ],
@@ -72,7 +72,6 @@ module.exports = {
           `**/taxonomies`,
           `**/users`,
         ],
-        keepMediaSizes: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

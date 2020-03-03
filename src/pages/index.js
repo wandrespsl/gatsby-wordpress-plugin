@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Section from "../components/Section"
+import SectionTwo from "../components/SectionTwo"
+import SectionNutshell from "../components/SectionNutshell"
 import SEO from "../components/seo"
 import { StyledCard, Button } from "../styles/components"
 import avatar from "../images/blog-radius.png"
@@ -10,6 +12,8 @@ const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" />
     <Section bgimage="home-gradient" />
+    <SectionTwo bgimage="home-blue" />
+    <SectionNutshell bgimage="home-white"/>
     <div className="columns is-multiline">
       {data.allWordpressPost.edges.map(({ node }) => (
         <StyledCard key={node.id}>

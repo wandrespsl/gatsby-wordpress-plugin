@@ -7,7 +7,7 @@ export default function Section(props) {
     <StyledSection className={props.bgimage}>
       <div className="custom-section">
         <div className="container">
-          <div className="column-3">
+          <div className="column-7">
             <span>Our passion is coding the future</span>
             <h1>
               Nearshore Software Development

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const colors = {
   ligthBlue: "#21d4fd",
@@ -7,8 +7,8 @@ export const colors = {
   textGray: "#888888",
   red: "#e60023",
   ligthGray: "#f5f5f5",
-  black: "#060606"
-};
+  black: "#060606",
+}
 
 export const StyledHeader = styled.header`
   background: transparent;
@@ -28,7 +28,7 @@ export const StyledHeader = styled.header`
   a {
     color: ${colors.ligthBlue};
   }
-`;
+`
 
 export const StyledCard = styled.div`
   border-radius: 1rem;
@@ -72,14 +72,17 @@ export const StyledCard = styled.div`
     font-size: 1rem;
     font-weight: 300;
   }
-`;
+  a {
+    text-decoration: none;
+  }
+`
 export const Button = styled.button`
   cursor: pointer;
   background-color: ${({ type }) =>
     type === "outline" ? "transparent" : colors.purple};
   color: ${({ type }) => (type === "outline" ? colors.ligthBlue : "white")};
   font-size: 1.25rem;
-  padding: 0.4rem 1rem;
+  padding: 0.2rem 1rem;
   font-weight: 500;
   border: ${({ type }) =>
     type === "outline"
@@ -108,6 +111,12 @@ export const Button = styled.button`
       }
     }
   }
+  &.white {
+    border-color: white;
+    a {
+      color: white;
+    }
+  }
   &:disabled {
     background-color: ${colors.gray};
     border-color: ${colors.gray};
@@ -116,9 +125,8 @@ export const Button = styled.button`
   + button {
     margin: 0 0 0 1rem;
   }
-`;
+`
 export const StyledSection = styled.div`
-  // background: ${colors.darkPurple};
   height: 100vh;
   display: flex;
   align-items: center;
@@ -158,12 +166,138 @@ export const StyledSection = styled.div`
         display: flex;
         align-items: center;
       }
-      .column-3 {
+      .column-7 {
         width: 60%;
       }
     }
   }
-`;
+  &.home-blue {
+    background: ${colors.ligthBlue};
+    .column-6 {
+      width: 50%;
+    }
+    p.ready {
+      color: white;
+      font-weight: 800;
+      .ready1 {
+        font-size: 2.813rem;
+        opacity: 0.68;
+        line-height: 2.5rem;
+      }
+      a {
+        font-size: 4.688rem;
+        color: white;
+        opacity: 0.91;
+        display: block;
+        line-height: 3.625rem;
+        text-decoration: none;
+      }
+      .ready2 {
+        font-size: 5.5rem;
+        opacity: 0.71;
+        padding: 0 0 0 5rem;
+        line-height: 4.375rem;
+      }
+    }
+    .description {
+      max-width: 34.375rem;
+      margin-left: 8.33333333%;
+      p {
+        font-size: 1.375rem;
+        line-height: 1.688rem;
+        color: white;
+        font-weight: 300;
+        letter-spacing: -0.1px;
+      }
+    }
+  }
+  a.no-link {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    display: inline;
+  }
+  &.home-white {
+    width: 1170px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    .custom-section {
+      width: 100%;
+      .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h3 {
+          color: ${colors.darkPurple};
+          margin-bottom: 3.125rem;
+          margin-top: 2.5rem;
+          position: relative;
+          font-size: 3.125rem;
+          margin: 0 0 1.563rem;
+          line-height: 3.438rem;
+          font-weight: 800;
+          letter-spacing: -0.04px;
+          &:before {
+            content: "PSL";
+            font-size: 6.875rem;
+            font-weight: 900;
+            color: ${colors.darkPurple};
+            opacity: 0.07;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            line-height: 6.875rem;
+            margin-top: -5.938rem;
+          }
+        }
+        .d-grid {
+          display: grid;
+          grid-column-gap: 0;
+          grid-row-gap: 20px;
+          grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+          width: 100%;
+          .nutshell-data {
+            margin: 0 30px 0 0;
+            padding: 0 0 0 30px;
+            position: relative;
+            &:before {
+              background: #e9ebee;
+              content: "";
+              display: block;
+              height: 80px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 1px;
+            }
+            &:first-child {
+              &:before {
+                display: none;
+              }
+            }
+
+            .data {
+              font-size: 50px;
+              color: ${colors.ligthBlue};
+              font-weight: 800;
+              line-height: 73px;
+            }
+
+            h4 {
+              color: ${colors.darkPurple};
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 19px;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+`
 export const StyledFooter = styled.div`
   background: ${colors.darkPurple};
   color: white;
@@ -242,4 +376,4 @@ export const StyledFooter = styled.div`
       }
     }
   }
-`;
+`
