@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,10 +15,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
+      resolve: `gatsby-plugin-purgecss`, // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.scss"] // applies purging only on the bulma css file
+        purgeOnly: [`/all.scss`] // applies purging only on the bulma css file
       }
     }, // must be after other CSS plugins
     {
@@ -29,7 +29,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-netlify",
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,8 +46,8 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // baseUrl will need to be updated with your WordPress source
-        baseUrl: `demo.wp-api.org`,
-        protocol: `https`,
+        baseUrl: `pslpruebas.com/elementor`,
+        protocol: `http`,
         // is it hosted on wordpress.com, or self-hosted?
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
@@ -58,19 +58,19 @@ module.exports = {
             resolve: `gatsby-wordpress-inline-images`,
             options:
             {
-              baseUrl: `demo.wp-api.org`,
-              protocol: `https`
+              baseUrl: `pslpruebas.com/elementor`,
+              protocol: `http`
             }
           }
         ],
         includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies",
-          "**/users",
+          `**/categories`,
+          `**/posts`,
+          `**/pages`,
+          `**/media`,
+          `**/tags`,
+          `**/taxonomies`,
+          `**/users`,
         ],
         keepMediaSizes: false,
       },
