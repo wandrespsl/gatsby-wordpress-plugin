@@ -3,7 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { StyledSection, Button } from "../styles/components"
 
-export default function Section(props) {
+export default function SectionTwo(props) {
   return (
     <StyledSection className={props.bgimage}>
       <div className="custom-section">
@@ -34,9 +34,9 @@ export default function Section(props) {
               </p>
               <div className="offsetTopS">
                 <Button type="outline" className="white">
-                  <a href="/" className="btn btn-primary">
+                  <Link to="/" className="btn btn-primary">
                     Let´s talk!
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

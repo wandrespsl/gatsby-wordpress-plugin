@@ -8,7 +8,7 @@ export default function Section(props) {
       <div className="custom-section">
         <div className="container">
           <div className="column-7">
-            <span>Our passion is coding the future</span>
+            <span className="title">Our passion is coding the future</span>
             <h1>
               Nearshore Software Development
               Offshore Outsourcing Center
